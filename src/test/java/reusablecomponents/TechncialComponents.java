@@ -19,6 +19,17 @@ public class TechncialComponents extends TestSetup {
 		e.printStackTrace();
 	}
 	}
+	public  void Verifyurl(String url){
+		try{
+			driver=getDriver();
+	String currenturl=	driver.getCurrentUrl();
+	if(currenturl.equals(url)){
+		System.out.println("text is verified");
+	}
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	}
 
 		public static void Type(WebElement element, String text){
 			try{
