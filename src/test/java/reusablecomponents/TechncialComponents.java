@@ -10,7 +10,7 @@ public class TechncialComponents extends TestSetup {
 //	public TechncialComponents(WebDriver driver){
 //		driver=this.driver;
 //	}
-	public  WebDriver driver;
+	public static WebDriver driver;
 	public  void navigateurl(String url){
 		try{
 			driver=getDriver();
@@ -37,5 +37,22 @@ public class TechncialComponents extends TestSetup {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		}
+		
+		public static void click(WebElement element){
+			try{
+			element.click();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		}
+		public static String gettext(WebElement element){
+			String text="";
+			try{
+		text=	element.getText();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+			return text;
 		}
 }
