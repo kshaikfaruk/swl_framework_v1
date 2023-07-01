@@ -3,7 +3,10 @@
   <groupId>swl_framework</groupId>
   <artifactId>swl_framework_v1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- 
+ <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+</properties>
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
