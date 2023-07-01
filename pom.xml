@@ -3,9 +3,7 @@
   <groupId>swl_framework</groupId>
   <artifactId>swl_framework_v1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- <properties>
-    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-</properties>
+ 
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -35,11 +33,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.22</version>
-        </dependency>  
-        <dependency>
-         <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
         </dependency>      
   </dependencies>
   
@@ -57,7 +50,7 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-		
+			
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
