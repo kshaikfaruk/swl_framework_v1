@@ -3,10 +3,6 @@
   <groupId>swl_framework</groupId>
   <artifactId>swl_framework_v1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <properties>
-   <maven.compiler.source>1.6</maven.compiler.source>
-   <maven.compiler.target>1.6</maven.compiler.target>
- </properties>
  
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -49,7 +45,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.18.1</version>
+				<version>3.1.2</version>
 				<configuration>
 					<testFailureIgnore> false </testFailureIgnore>
 					<suiteXmlFiles>
