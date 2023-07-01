@@ -7,6 +7,7 @@ import java.util.Properties;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -32,7 +33,10 @@ public WebDriver launchbrowser(String browser){
 	 switch(browser){
 	 case "chrome":
 		 WebDriverManager.chromedriver().setup();
-		 driver= new ChromeDriver();
+		 ChromeOptions opt = new ChromeOptions();
+		 opt.addArguments("--remote-allow-origins=*");
+		 // Launching the browser
+		 driver=new ChromeDriver(opt);
 		
 	break;
 	 }
