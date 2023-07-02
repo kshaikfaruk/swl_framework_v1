@@ -8,5 +8,6 @@ public class VerifyURLoftheapllicationTest extends BussinessComponents {
 	@Test
  public void verify_Url(){
 	 navigatetoapplication(pro.getProperty("url"));
+	 teardown();
  }
 }
