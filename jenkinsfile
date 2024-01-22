@@ -1,0 +1,20 @@
+pipeline {
+    agent {label 'awsus'}
+    
+    stages {
+        stage('AT') {
+            steps {
+              script{
+              if(params.ENV=='QA'){
+              try{
+              build 'swl_framework_v1'
+              }catch(e){
+              echo "build is failed"
+              }
+              }  
+            }
+        }
+        }
+        
+    
+   

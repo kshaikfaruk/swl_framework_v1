@@ -10,7 +10,7 @@ public class TechncialComponents extends TestSetup {
 //	public TechncialComponents(WebDriver driver){
 //		driver=this.driver;
 //	}
-	public static WebDriver driver;
+//	public static WebDriver driver;
 	public  void navigateurl(String url){
 		try{
 			driver=getDriver();

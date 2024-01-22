@@ -2,6 +2,7 @@ package config;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.MalformedURLException;
 import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,18 +26,23 @@ public static JavascriptExecutor js;
 }
 
 @BeforeMethod
-public void openBrowser(){
+public void openBrowser() throws MalformedURLException{
 	driver=launchbrowser(getProperties("browser"));
 }
 
-public WebDriver launchbrowser(String browser){
+public WebDriver launchbrowser(String browser) throws MalformedURLException{
 	 switch(browser){
 	 case "chrome":
-		 WebDriverManager.chromedriver().setup();
+		 System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
+//		 WebDriverManager.chromedriver().setup();
 		 ChromeOptions opt = new ChromeOptions();
 		 opt.addArguments("--remote-allow-origins=*");
-		 // Launching the browser
-		 driver=new ChromeDriver(opt);
+		 driver= new ChromeDriver(opt);
+//		  DesiredCapabilities cap= new DesiredCapabilities();
+//		  cap.setBrowserName("chrome");
+//		  cap.setCapability("browserVersion","119.0");
+//		 // Launching the browser
+//		 driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
 		
 	break;
 	 }
