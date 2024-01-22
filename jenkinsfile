@@ -1,6 +1,6 @@
 pipeline {
     agent{
-    docker {image 'node:16-alpine'}
+    docker {image 'image 'gradle:8.2.0-jdk17-alpine''}
     }
     stages {
         stage('AT') {
