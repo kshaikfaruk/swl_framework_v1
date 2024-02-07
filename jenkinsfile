@@ -1,7 +1,5 @@
 pipeline {
-    agent{
-    docker {image 'image 'gradle:8.2.0-jdk17-alpine''}
-    }
+    agent{label 'gamechanger' }
     stages {
         stage('AT') {
             steps {
