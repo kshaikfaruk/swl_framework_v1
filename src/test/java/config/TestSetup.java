@@ -33,7 +33,8 @@ public void openBrowser() throws MalformedURLException{
 public WebDriver launchbrowser(String browser) throws MalformedURLException{
 	 switch(browser){
 	 case "chrome":
-		 System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
+		 WebDriverManager.chromedriver().setup();
+//		 System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
 //		 WebDriverManager.chromedriver().setup();
 		 ChromeOptions opt = new ChromeOptions();
 		 opt.addArguments("--remote-allow-origins=*");
