@@ -1,5 +1,5 @@
 pipeline {
-    agent{label 'gamechanger' }
+    //agent{label 'gamechanger' }
     stages {
         stage('AT') {
             steps {
