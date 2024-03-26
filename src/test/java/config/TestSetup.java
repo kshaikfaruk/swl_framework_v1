@@ -7,8 +7,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -33,12 +33,12 @@ public void openBrowser() throws MalformedURLException{
 public WebDriver launchbrowser(String browser) throws MalformedURLException{
 	 switch(browser){
 	 case "chrome":
+	 WebDriverManager.edgedriver().setup();
+//		 System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
 //		 WebDriverManager.chromedriver().setup();
-		 System.setProperty("webdriver.chrome.driver","D://chromedriver.exe");
-//		 WebDriverManager.chromedriver().setup();
-		 ChromeOptions opt = new ChromeOptions();
+		 EdgeOptions opt = new  EdgeOptions();
 		 opt.addArguments("--remote-allow-origins=*");
-		 driver= new ChromeDriver(opt);
+		 driver= new EdgeDriver(opt);
 //		  DesiredCapabilities cap= new DesiredCapabilities();
 //		  cap.setBrowserName("chrome");
 //		  cap.setCapability("browserVersion","119.0");
