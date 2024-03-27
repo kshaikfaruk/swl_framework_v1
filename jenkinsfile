@@ -12,6 +12,24 @@ pipeline {
             }
         }
         }
+          post {
+        success {
+            echo 'Build successful!'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+    
+    stage('Cleanup') {
+        steps {
+            node {
+                // Add cleanup steps here
+                echo 'Cleaning up workspace...'
+                deleteDir()
+            }
+        }
+    }
     }
 }
         
