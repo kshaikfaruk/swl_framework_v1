@@ -1,5 +1,5 @@
 pipeline {
-   agent {"Newyork_gamer"}
+   agent "Newyork_gamer"
     stages {
         stage('AT') {
             steps {
